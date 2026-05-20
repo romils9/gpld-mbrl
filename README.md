@@ -80,20 +80,34 @@ scripts and `dreamerv3/configs.yaml` for the full configuration surface.
 See `REPRODUCTION.md` for environment setup, training, evaluation, score
 processing, smoothness analysis, and fresh-clone validation notes.
 
-## Attribution
+## Citation
 
-This repository includes and modifies DreamerV3. Please cite the original
-DreamerV3 work when using this code:
+If you use this repository, please cite our GPLD paper:
 
 ```bibtex
-@article{hafner2025dreamerv3,
-  title={Mastering diverse control tasks through world models},
-  author={Hafner, Danijar and Pasukonis, Jurgis and Ba, Jimmy and Lillicrap, Timothy},
-  journal={Nature},
-  pages={1--7},
-  year={2025},
-  publisher={Nature Publishing Group}
+@article{sonigra2026gpld,
+  title={Dreaming Smoothly and Sample Efficiently with Gradient Penalized Latent Dynamics},
+  author={Sonigra, Romil V. and Kumar, P. R.},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026}
 }
 ```
 
+This repository builds on DreamerV3. Please also cite the original DreamerV3 paper:
+
+```bibtex
+@article{hafner2025dreamer,
+  title={Mastering diverse control tasks through world models},
+  author={Hafner, Danijar and Pasukonis, Jurgis and Ba, Jimmy and Lillicrap, Timothy},
+  journal={Nature},
+  volume={640},
+  pages={647--653},
+  year={2025},
+  doi={10.1038/s41586-025-08744-2}
+}
+```
+
+## License
+
 The code is released under the MIT License. See `LICENSE` and `NOTICE`.
+
