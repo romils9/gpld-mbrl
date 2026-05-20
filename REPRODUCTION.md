@@ -42,16 +42,16 @@ parameters with environment variables.
 Proprioceptive DMC:
 
 ```bash
-SEEDS="0 1 2 3 4" ENV_NAME=dmc_walker_walk STEPS=100000 \
-PRIOR_LAM=0.0 POST_LAM=0.5 DECAY_TYPE=sqrt_time \
+SEEDS="0 1 2 3 4" ENV_NAME=dmc_walker_walk STEPS=1000000 \
+PRIOR_LAM=0.0 POST_LAM=0.5 SAMPLE_FRAC=0.5 DECAY_TYPE=sqrt_time \
 LOGDIR_ROOT=./logdir/proprio ./run_dmc_lipschitz_seeds.sh
 ```
 
 Pixel DMC:
 
 ```bash
-SEEDS="0 1 2 3 4" ENV_NAME=dmc_cheetah_run STEPS=100000 \
-PRIOR_LAM=0.0 POST_LAM=0.5 DECAY_TYPE=sqrt_time \
+SEEDS="0 1 2 3 4" ENV_NAME=dmc_cheetah_run STEPS=1000000 \
+PRIOR_LAM=0.0 POST_LAM=0.5 SAMPLE_FRAC=0.5 DECAY_TYPE=sqrt_time \
 LOGDIR_ROOT=./logdir/vision ./run_dmc_pixel_lipschitz_seeds.sh
 ```
 
