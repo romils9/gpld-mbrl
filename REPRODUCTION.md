@@ -20,6 +20,20 @@ pip install -U "jax[cuda12]==0.4.33" -f https://storage.googleapis.com/jax-relea
 export MUJOCO_GL=egl
 ```
 
+## Hardware and compute environment
+
+The experiments reported in the paper were run on Texas A&M High Performance Research Computing (HPRC) systems. Runs were executed on GPU compute nodes using the software environment described above. Exact runtime can vary with GPU model, queue load, driver version, CUDA/JAX version, and MuJoCo/EGL configuration.
+
+For reproducibility, we recommend recording the following metadata for each run:
+
+- HPRC cluster name and partition/queue
+- GPU model and memory
+- CUDA and driver versions
+- Python, JAX, MuJoCo, and `dm_control` versions
+- Git commit SHA
+- full command line and environment-variable overrides
+- seed list
+
 ## Training
 
 The public scripts default to local, relative output directories. Override the
