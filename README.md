@@ -7,10 +7,7 @@ names while publishing the project as `gpld-mbrl`.
 This initial release focuses on GPLD-DreamerV3; future releases may include
 additional model-based RL baselines and GPLD variants.
 
-The main addition is a configurable gradient penalty in the RSSM prior and
-posterior logits. The penalty can be enabled from the command line through
-`agent.dyn.rssm.gp.*` configuration keys and supports constant, step, custom,
-and time-decayed schedules.
+The main addition is a configurable gradient penalty for RSSM latent distributions. The paper’s default GPLD-DreamerV3 setting applies the penalty to the posterior latent probability map, while the code also exposes prior and joint prior-posterior variants for ablations.
 
 ## Installation
 
