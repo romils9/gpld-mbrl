@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpld-mbrl"
+version = "0.1.0"
+description = "DreamerV3 with GPLD/Lipschitz gradient-penalty regularization for model-based reinforcement learning."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {file = "LICENSE"}
+authors = [
+  {name = "GPLD-MBRL contributors"},
+]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "ale_py==0.9.0",
+  "autorom[accept-rom-license]==0.6.1",
+  "av",
+  "chex",
+  "cloudpickle",
+  "colored_traceback",
+  "dm_control",
+  "einops",
+  "elements>=3.19.1",
+  "google-resumable-media>=2.7.2",
+  "granular>=0.20.3",
+  "jax==0.4.33",
+  "jaxtyping",
+  "matplotlib",
+  "ninjax>=3.5.1",
+  "numpy<2",
+  "optax",
+  "pillow",
+  "portal>=3.5.0",
+  "pytest",
+  "ruamel.yaml",
+  "scope>=0.4.4",
+  "tqdm",
+  "zerofun",
+]
+
+[project.urls]
+Repository = "https://github.com/romils9/gpld-mbrl"
+
+[tool.setuptools.packages.find]
+include = ["dreamerv3*", "embodied*"]
+
+[tool.setuptools.package-data]
+dreamerv3 = ["configs.yaml"]
+embodied = ["envs/*.xml"]

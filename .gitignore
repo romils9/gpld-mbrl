@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Local environments and editors
+.venv/
+venv/
+env/
+.conda/
+.python-version
+.idea/
+.vscode/
+*.code-workspace
+
+# Simulator/runtime local files
+MUJOCO_LOG.TXT
+
+# Training outputs, checkpoints, logs, and analysis artifacts
+logdir/
+logs/
+newlogs/
+slurm_logs/
+checkpoints/
+ckpt/
+evals/
+processed_scores/
+smoothness_analysis_all_ckpts/
+wandb/
+scope/
+
+# Large/generated experiment data
+*.jsonl
+*.npz
+*.npy
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db

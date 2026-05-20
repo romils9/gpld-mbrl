@@ -1,0 +1,6 @@
+GPLD-MBRL includes and modifies DreamerV3, originally developed by Danijar
+Hafner and contributors and released under the MIT License.
+
+The GPLD-MBRL modifications add gradient-penalty Lipschitz regularization,
+checkpoint/evaluation utilities, and plotting/processing scripts for model-based
+reinforcement learning experiments.
