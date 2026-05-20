@@ -4,6 +4,9 @@ GPLD-MBRL is a research codebase for DreamerV3 with gradient-penalty Lipschitz
 regularization. It keeps the original `dreamerv3` and `embodied` Python package
 names while publishing the project as `gpld-mbrl`.
 
+This initial release focuses on GPLD-DreamerV3; future releases may include
+additional model-based RL baselines and GPLD variants.
+
 The main addition is a configurable gradient penalty in the RSSM prior and
 posterior logits. The penalty can be enabled from the command line through
 `agent.dyn.rssm.gp.*` configuration keys and supports constant, step, custom,
