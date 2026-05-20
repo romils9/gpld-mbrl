@@ -89,7 +89,7 @@ The GPLD experiments can be configured through environment variables passed to t
 | GP stochastic rows | `GP_ROWS` | `agent.dyn.rssm.gp.gp_rows` | `32` |
 | Random GP row sampling | `GP_ROWS_RANDOM` | `agent.dyn.rssm.gp.gp_rows_random` | `false` |
 | Decay type | `DECAY_TYPE` | `agent.dyn.rssm.gp.decay` | `sqrt_time` |
-| Minimum decayed coefficient | `MIN_LAM` | `agent.dyn.rssm.gp.min_lam` | `0.01` |
+| Minimum decayed coefficient | `MIN_LAM` | `agent.dyn.rssm.gp.min_lam` | `0.001` |
 | GP start step | `START_STEP` | `agent.dyn.rssm.gp.start_step` | `0` |
 | DMC task | `ENV_NAME` | `task` | `dmc_walker_walk` |
 | Training steps | `STEPS` | `run.steps` | `1000000` |
