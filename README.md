@@ -62,14 +62,16 @@ Proprioceptive DMC with posterior regularization:
 
 ```bash
 POST_LAM=0.5 PRIOR_LAM=0.0 ENV_NAME=dmc_walker_walk \
-STEPS=1000000 TRAIN_RATIO=512 ./run_dmc_lipschitz_seeds.sh
+SAMPLE_FRAC=0.5 STEPS=1000000 TRAIN_RATIO=512 \
+./run_dmc_lipschitz_seeds.sh
 ```
 
 Pixel DMC with posterior regularization:
 
 ```bash
 POST_LAM=0.5 PRIOR_LAM=0.0 ENV_NAME=dmc_cheetah_run \
-STEPS=1000000 TRAIN_RATIO=512 ./run_dmc_pixel_lipschitz_seeds.sh
+SAMPLE_FRAC=0.5 STEPS=1000000 TRAIN_RATIO=512 \
+./run_dmc_pixel_lipschitz_seeds.sh
 ```
 
 Most experiment settings can be overridden via environment variables. See the
@@ -79,23 +81,27 @@ scripts and `dreamerv3/configs.yaml` for the full configuration surface.
 
 The GPLD experiments can be configured through environment variables passed to the run scripts.
 
-| Paper quantity | Environment variable | Typical value |
-|---|---:|---:|
-| Posterior penalty coefficient \(\lambda^{\mathrm{post}}_0\) | `POST_LAM` | `0.5` |
-| Prior penalty coefficient \(\lambda^{\mathrm{prior}}_0\) | `PRIOR_LAM` | `0.0` |
-| Sampling fraction \(\rho\) | `GP_FRAC` | `0.5` |
-| Decay type | `DECAY_TYPE` | `sqrt_time` |
-| DMC task | `ENV_NAME` | `dmc_walker_walk` |
-| Training steps | `STEPS` | `1000000` |
-| Train ratio | `TRAIN_RATIO` | `512` |
-| Seed list | `SEEDS` | `"0 1 2 3 4"` |
-| Log directory root | `LOGDIR_ROOT` | `./logdir/proprio` |
+| Paper quantity | Script environment variable | Dreamer config key | Typical value |
+|---|---:|---:|---:|
+| Posterior penalty coefficient \(\lambda^{\mathrm{post}}_0\) | `POST_LAM` | `agent.dyn.rssm.gp.post_lam` | `0.5` |
+| Prior penalty coefficient \(\lambda^{\mathrm{prior}}_0\) | `PRIOR_LAM` | `agent.dyn.rssm.gp.prior_lam` | `0.0` |
+| Sampling fraction \(\rho\) | `SAMPLE_FRAC` | `agent.dyn.rssm.gp.sample_frac` | `0.5` |
+| GP stochastic rows | `GP_ROWS` | `agent.dyn.rssm.gp.gp_rows` | `32` |
+| Random GP row sampling | `GP_ROWS_RANDOM` | `agent.dyn.rssm.gp.gp_rows_random` | `false` |
+| Decay type | `DECAY_TYPE` | `agent.dyn.rssm.gp.decay` | `sqrt_time` |
+| Minimum decayed coefficient | `MIN_LAM` | `agent.dyn.rssm.gp.min_lam` | `0.01` |
+| GP start step | `START_STEP` | `agent.dyn.rssm.gp.start_step` | `0` |
+| DMC task | `ENV_NAME` | `task` | `dmc_walker_walk` |
+| Training steps | `STEPS` | `run.steps` | `1000000` |
+| Train ratio | `TRAIN_RATIO` | `run.train_ratio` | `512` |
+| Seed list | `SEEDS` | `seed` per run | `"0 1 2 3 4"` |
+| Log directory root | `LOGDIR_ROOT` | `logdir` prefix | `./logdir/proprio` |
 
 For example:
 
 ```bash
 SEEDS="0 1 2 3 4" ENV_NAME=dmc_walker_walk STEPS=1000000 \
-PRIOR_LAM=0.0 POST_LAM=0.5 GP_FRAC=0.5 DECAY_TYPE=sqrt_time \
+PRIOR_LAM=0.0 POST_LAM=0.5 SAMPLE_FRAC=0.5 DECAY_TYPE=sqrt_time \
 LOGDIR_ROOT=./logdir/proprio ./run_dmc_lipschitz_seeds.sh
 ```
 
@@ -134,4 +140,3 @@ This repository builds on DreamerV3. Please also cite the original DreamerV3 pap
 ## License
 
 The code is released under the MIT License. See `LICENSE` and `NOTICE`.
-
