@@ -83,9 +83,9 @@ The GPLD experiments can be configured through environment variables passed to t
 
 | Paper quantity | Script environment variable | Dreamer config key | Typical value |
 |---|---:|---:|---:|
-| Posterior penalty coefficient \(\lambda^{\mathrm{post}}_0\) | `POST_LAM` | `agent.dyn.rssm.gp.post_lam` | `0.5` |
-| Prior penalty coefficient \(\lambda^{\mathrm{prior}}_0\) | `PRIOR_LAM` | `agent.dyn.rssm.gp.prior_lam` | `0.0` |
-| Sampling fraction \(\rho\) | `SAMPLE_FRAC` | `agent.dyn.rssm.gp.sample_frac` | `0.5` |
+| Posterior penalty coefficient `lambda_post_0` | `POST_LAM` | `agent.dyn.rssm.gp.post_lam` | `0.5` |
+| Prior penalty coefficient `lambda_prior_0` | `PRIOR_LAM` | `agent.dyn.rssm.gp.prior_lam` | `0.0` |
+| Sampling fraction `rho` | `SAMPLE_FRAC` | `agent.dyn.rssm.gp.sample_frac` | `0.5` |
 | GP stochastic rows | `GP_ROWS` | `agent.dyn.rssm.gp.gp_rows` | `32` |
 | Random GP row sampling | `GP_ROWS_RANDOM` | `agent.dyn.rssm.gp.gp_rows_random` | `false` |
 | Decay type | `DECAY_TYPE` | `agent.dyn.rssm.gp.decay` | `sqrt_time` |
