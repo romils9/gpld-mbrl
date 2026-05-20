@@ -75,6 +75,30 @@ STEPS=100000 TRAIN_RATIO=512 ./run_dmc_pixel_lipschitz_seeds.sh
 Most experiment settings can be overridden via environment variables. See the
 scripts and `dreamerv3/configs.yaml` for the full configuration surface.
 
+## Main configuration knobs
+
+The GPLD experiments can be configured through environment variables passed to the run scripts.
+
+| Paper quantity | Environment variable | Typical value |
+|---|---:|---:|
+| Posterior penalty coefficient \(\lambda^{\mathrm{post}}_0\) | `POST_LAM` | `0.5` |
+| Prior penalty coefficient \(\lambda^{\mathrm{prior}}_0\) | `PRIOR_LAM` | `0.0` |
+| Sampling fraction \(\rho\) | `GP_FRAC` | `0.5` |
+| Decay type | `DECAY_TYPE` | `sqrt_time` |
+| DMC task | `ENV_NAME` | `dmc_walker_walk` |
+| Training steps | `STEPS` | `1000000` |
+| Train ratio | `TRAIN_RATIO` | `512` |
+| Seed list | `SEEDS` | `"0 1 2 3 4"` |
+| Log directory root | `LOGDIR_ROOT` | `./logdir/proprio` |
+
+For example:
+
+```bash
+SEEDS="0 1 2 3 4" ENV_NAME=dmc_walker_walk STEPS=1000000 \
+PRIOR_LAM=0.0 POST_LAM=0.5 GP_FRAC=0.5 DECAY_TYPE=sqrt_time \
+LOGDIR_ROOT=./logdir/proprio ./run_dmc_lipschitz_seeds.sh
+```
+
 ## Reproduction
 
 See `REPRODUCTION.md` for environment setup, training, evaluation, score
