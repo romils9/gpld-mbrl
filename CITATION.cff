@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "GPLD-MBRL"
+message: "If you use this software, please cite the GPLD paper and the original DreamerV3 paper."
+type: software
+authors:
+  - family-names: "Sonigra"
+    given-names: "Romil V."
+  - family-names: "Kumar"
+    given-names: "P. R."
+year: 2026
+license: MIT
+repository-code: "https://github.com/romils9/gpld-mbrl"
+preferred-citation:
+  type: article
+  title: "Dreaming Smoothly and Sample Efficiently with Gradient Penalized Latent Dynamics"
+  authors:
+    - family-names: "Sonigra"
+      given-names: "Romil V."
+    - family-names: "Kumar"
+      given-names: "P. R."
+  journal: "arXiv preprint arXiv:XXXX.XXXXX"
+  year: 2026
