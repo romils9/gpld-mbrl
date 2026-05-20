@@ -62,14 +62,14 @@ Proprioceptive DMC with posterior regularization:
 
 ```bash
 POST_LAM=0.5 PRIOR_LAM=0.0 ENV_NAME=dmc_walker_walk \
-STEPS=100000 TRAIN_RATIO=512 ./run_dmc_lipschitz_seeds.sh
+STEPS=1000000 TRAIN_RATIO=512 ./run_dmc_lipschitz_seeds.sh
 ```
 
 Pixel DMC with posterior regularization:
 
 ```bash
 POST_LAM=0.5 PRIOR_LAM=0.0 ENV_NAME=dmc_cheetah_run \
-STEPS=100000 TRAIN_RATIO=512 ./run_dmc_pixel_lipschitz_seeds.sh
+STEPS=1000000 TRAIN_RATIO=512 ./run_dmc_pixel_lipschitz_seeds.sh
 ```
 
 Most experiment settings can be overridden via environment variables. See the
