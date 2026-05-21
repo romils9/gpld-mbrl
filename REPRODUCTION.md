@@ -26,16 +26,6 @@ The experiments reported in the paper were run on Texas A&M High Performance Res
 
 Portions of this research were conducted with the advanced computing resources provided by Texas A&M High Performance Research Computing.
 
-For reproducibility, we recommend recording the following metadata for each run:
-
-- HPRC cluster name and partition/queue
-- GPU model and memory
-- CUDA and driver versions
-- Python, JAX, MuJoCo, and `dm_control` versions
-- Git commit SHA
-- full command line and environment-variable overrides
-- seed list
-
 ## Training
 
 The public scripts default to local, relative output directories. Override the
@@ -118,19 +108,9 @@ python compare_lipschitz.py \
   --lipschitz_dir /path/to/gpld_run
 ```
 
-## Reproducibility Notes
+## Reproducibility notes
 
-The run scripts set `PYTHONHASHSEED`, `TF_DETERMINISTIC_OPS`, and
-`TF_CUDNN_DETERMINISTIC` for each seed. Exact reproducibility can still vary
-with GPU model, driver, CUDA/JAX versions, and simulator backend.
-
-Recommended metadata to record for each run:
-
-- command line and environment overrides
-- seed list
-- GPU model and driver
-- Python, JAX, CUDA, and MuJoCo versions
-- git commit SHA
+The run scripts set `PYTHONHASHSEED`, `TF_DETERMINISTIC_OPS`, and `TF_CUDNN_DETERMINISTIC` for each seed where applicable. However, exact reproducibility is not expected due to JAX/GPU nondeterminism, simulator behavior, hardware differences, and stochastic reinforcement-learning training. The provided scripts and configurations are intended to reproduce the experimental setup and approximate performance trends reported in the paper.
 
 ## Fresh-Clone Validation
 
