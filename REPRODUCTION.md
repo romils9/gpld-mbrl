@@ -24,6 +24,8 @@ export MUJOCO_GL=egl
 
 The experiments reported in the paper were run on Texas A&M High Performance Research Computing (HPRC) systems. Runs were executed on GPU compute nodes using the software environment described above. Exact runtime can vary with GPU model, queue load, driver version, CUDA/JAX version, and MuJoCo/EGL configuration.
 
+Portions of this research were conducted with the advanced computing resources provided by Texas A&M High Performance Research Computing.
+
 For reproducibility, we recommend recording the following metadata for each run:
 
 - HPRC cluster name and partition/queue
