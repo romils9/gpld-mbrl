@@ -115,11 +115,14 @@ processing, smoothness analysis, and fresh-clone validation notes.
 If you use this repository, please cite our GPLD paper:
 
 ```bibtex
-@article{sonigra2026gpld,
-  title={Dreaming Smoothly and Sample Efficiently with Gradient Penalized Latent Dynamics},
-  author={Sonigra, Romil V. and Kumar, P. R.},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2026}
+@misc{sonigra2026dreamingsmoothlysampleefficiently,
+      title={Dreaming Smoothly and Sample Efficiently with Gradient Penalized Latent Dynamics}, 
+      author={Romil V. Sonigra and P. R. Kumar},
+      year={2026},
+      eprint={2605.23089},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.23089}, 
 }
 ```
 
